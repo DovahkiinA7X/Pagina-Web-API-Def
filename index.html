@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personajes - DC Comics</title>
+
+  <!-- Link de bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Link fuente de letra personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+
+
+</head>
+
+<!-- Un navbar de bootstrap de decoracion al inicio de la pagina -->
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">DC Comics</span>
+    </div>
+  </nav>
+  <main>
+    <h1>Personajes - DC Comics</h1>
+
+    <!-- Filtro por tipo de personaje + Buscador -->
+    <div class="busqueda" style="margin: 20px 0;">
+      <div class="buscador-container position-relative mb-3">
+        <input type="text" id="buscador" class="form-control" placeholder="Buscar personaje..." />
+        <span id="clear-btn" class="clear-btn position-absolute"
+          style="right: 15px; top: 50%; transform: translateY(-50%); cursor: pointer; font-size: 20px; display: none;">&times;</span>
+      </div>
+      <div class="filtro">
+        <label for="filtro">Filtrar por tipo:</label>
+        <select id="filtro">
+          <option value="todos">Todos</option>
+          <option value="good">Héroes</option>
+          <option value="bad">Villanos</option>
+          <option value="neutral">Neutral</option>
+        </select>
+      </div>
+    </div>
+
+    <section class="personages"></section>
+  </main>
+
+  <!-- MODAL: Pop up al presionar una imagen -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="personaje-detalle"></div>
+    </div>
+  </div>
+  
+  <!-- Etiqueta semantica de footer que queda al final de la pagina para que se vea bonito y preofesional-->
+  <footer>
+    <p style="color:white;">© 2025 DC Comics Fan Page</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+   <!-- Boton para volver al inicio de la pagina -->
+  <button id="scrollToTop" title="Volver al inicio">⬆️</button>
+</body>
+
+</html>
