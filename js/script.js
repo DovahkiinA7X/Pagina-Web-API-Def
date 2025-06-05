@@ -17,12 +17,14 @@ async function getPersonages() {
   return personages;
 }
 
+// Función que renderiza los personajes en la página
 async function renderPersonages(filtro = "todos", texto = "") {
   const personages = await getPersonages();
 
+   // Se diltran solo personajes de DC Comics y se excluyen algunos erróneos
   const dcCharacters = personages.filter(p =>
     p.biography.publisher === "DC Comics" &&
-    !["Ben 10", "Chameleon"].includes(p.name)
+    !["Ben 10", "Chameleon", "Kevin 11"].includes(p.name)
   );
 
   // Mostrar un botón al hacer scroll hacia abajo

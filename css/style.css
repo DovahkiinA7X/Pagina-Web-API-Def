@@ -32,8 +32,8 @@ body::before {
 
 /* Título principal */
 h1 {
-  font-family: 'Bebas Neue', sans-serif;
   /* Fuente de letra personalizada */
+  font-family: 'Bebas Neue', sans-serif;
   background: linear-gradient(to right, #1e1e1e, #3e3e3e);
   color: #ffffff;
   padding: 15px 30px;
@@ -218,7 +218,7 @@ select {
   color: #000;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   display: none;
   z-index: 999;
